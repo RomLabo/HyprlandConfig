@@ -1,0 +1,55 @@
+/*
+0000000001 Author RomLabo 111111111
+1000111000 Waybar Style 11111111111
+1000000001 Created on 18/02/2024 11
+10001000111110000000011000011100001
+10001100011110001100011000101010001
+00000110000110000000011000110110001
+*/
+
+/* ~/.config/waybar/style.css */
+
+* {
+    font-family: Arial, Roboto, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #555F61;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#workspaces{padding-right: 10px;}
+#window{margin: 0 4px;}
+
+#clock, #temperature, #cpu,
+#memory, #battery, #network, 
+#bluetooth, #blacklight, #pulseaudio,
+#disk, #wireplumber, #custom-media, 
+#tray, #mpd, #idle-inhibitor,
+#custom-rlogo, 
+#workspaces button {margin-top: 10px;}
+
+#custom-rlogo{margin-left:10px;}
+
+#temperature.critical,
+#network.disconnected,
+#battery.charging, 
+#battery.plugged,
+#pulseaudio.muted {color: #6F7C80;}
+
+@keyframes blink {
+    to {
+        color: #6F7C80;
+    }
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-media{min-width: 100px;}
