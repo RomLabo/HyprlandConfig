@@ -58,7 +58,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "Спикер.{volume}    Микро.{format_source}",
+        "format": "Спикер.{volume}    Микро.{volume}",
         "on-click": "pavucontrol"
     },
     "custom/rlogo": {
