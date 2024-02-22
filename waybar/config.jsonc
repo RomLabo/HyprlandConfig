@@ -6,7 +6,6 @@
 //00000110000110000000011000110110001
 
 // ~/.config/waybar/config.jsonc
-
 {
     "height": 20, 
     "spacing": 12, 
@@ -21,9 +20,7 @@
         "format-icons": {
             "1": "O",
             "2": "O",
-            "3": "O",
-            "4": "O",
-            "5": "O"
+            "3": "O"
         },
 	    "sort-by-number": true
     },
@@ -39,8 +36,6 @@
         "format": "Память.{}"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         "format-critical": "Темп.{temperatureC} !!",
         "format": "Темп.{temperatureC}"
@@ -55,7 +50,6 @@
         "format-plugged": "Батарея.{capacity} !!"
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "Сеть.{essid}.({signalStrength})",
         "format-ethernet": "Сеть.{ipaddr}/{cidr}",
         "tooltip-format": "{ifname} via {gwaddr}",
@@ -64,7 +58,6 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "Спикер.{volume}    Микро.{format_source}",
         "on-click": "pavucontrol"
     },
